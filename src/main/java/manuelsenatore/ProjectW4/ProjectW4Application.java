@@ -25,6 +25,7 @@ public class ProjectW4Application implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectW4Application.class, args);
+		System.out.println("hello");
 	}
 
 	@Override
@@ -35,6 +36,7 @@ public class ProjectW4Application implements CommandLineRunner {
 		//insertPostazione(Postazione.builder().tipo(Tipo.PRIVATO).maxSize(10).description("lavoro").edificio(es.findEdificioById(1L)).build());
 		//System.out.println(ps.getByTipoAndCitta(Tipo.PRIVATO, cs.findCittaById(1L)));
 		//insertPrenotazione(us.findUserById(1L),ps.findPostazioneById(2L),LocalDate.now());
+
 	}
 
 	public void insertUser(User u){

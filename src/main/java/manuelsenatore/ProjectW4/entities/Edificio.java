@@ -1,5 +1,8 @@
 package manuelsenatore.ProjectW4.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,10 +26,12 @@ public class Edificio {
 
     @ManyToOne
     @JoinColumn(name = "citta_id")
+    @JsonManagedReference
     private Citta citta;
 
     @OneToMany(mappedBy = "edificio")
     @ToString.Exclude
+    @JsonIgnore        // ignora completamente la proprietà
     List<Postazione> postazioni;
 
 

@@ -19,7 +19,7 @@ public class PrenotazioneService {
     public List<Prenotazione> getAll() {
         return pr.findAll();
     }
-    
+
     public Prenotazione findPrenotazioneById(Long id){
         return pr.findById(id).isPresent() ? pr.findById(id).get() : null;
     }
